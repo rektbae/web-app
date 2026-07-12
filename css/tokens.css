@@ -1,0 +1,38 @@
+/* REKT design tokens — the only place raw brand values may appear.
+   Values sourced from the Rekt Design System. */
+:root {
+  /* color — neutrals */
+  --color-bg: #0A0A0A;
+  --color-black: #000000;
+  --color-surface: #111111;
+  --color-surface-raised: #1A1A1A;
+  --color-border-subtle: #1E1E1E;
+  --color-ring: #2A2A2A;
+  --color-border: #2E2E2E;
+  --color-homebar: #3A3A3A;
+  --color-text: #FAFAF7;
+  --color-text-muted: #9A9A9A;
+  --color-text-faint: #6E6E6E;
+
+  /* color — brand */
+  --color-gold: #C9A24B;
+  --color-gold-light: #E8C97A;
+  --color-gold-dark: #8C6D2B;   /* design-system reserve; unused on this page */
+  --color-coral: #D96A5B;       /* design-system reserve; unused on this page */
+  --color-on-gold: #0A0A0A;
+  --color-glow: #1C1710;        /* phone-screen radial gradient inner stop */
+
+  /* typography */
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Archivo', sans-serif;
+  --font-mono: ui-monospace, Menlo, monospace; /* design-system reserve */
+
+  /* radius */
+  --radius-chip: 10px;
+  --radius-input: 12px;
+  --radius-pill: 999px;
+
+  /* layout */
+  --container-max: 1120px;
+  --container-pad: 80px;
+}
