@@ -18,7 +18,7 @@
   --color-gold: #C9A24B;
   --color-gold-light: #E8C97A;
   --color-gold-dark: #8C6D2B;   /* design-system reserve; unused on this page */
-  --color-coral: #D96A5B;       /* design-system reserve; unused on this page */
+  --color-coral: #D96A5B;       /* error text (waitlist modal) */
   --color-on-gold: #0A0A0A;
   --color-glow: #1C1710;        /* phone-screen radial gradient inner stop */
 

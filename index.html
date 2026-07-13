@@ -20,16 +20,18 @@
         <h1>Only the experiences you&nbsp;love</h1>
         <p class="lede">We build SaaS for nightclubs.</p>
         <div class="hero-cta">
-          <a href="#work-with-us" class="btn">Join waiting list</a>
+          <button type="button" class="btn" id="waitlist-open">Join waiting list</button>
         </div>
         <div class="store-chips">
           <div class="chip">
+            <svg class="chip-icon" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            <span class="chip-value">iOS</span>
             <span class="chip-label">Coming soon</span>
-            <span class="chip-value">App Store</span>
           </div>
           <div class="chip">
+            <svg class="chip-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-2.86-1.21-6.08-1.21-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48C3.3 11.25 1.28 14.44 1 18h22c-.28-3.56-2.3-6.75-5.4-8.52zM7 15.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm10 0c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z"/></svg>
+            <span class="chip-value">Android</span>
             <span class="chip-label">Coming soon</span>
-            <span class="chip-value">Google Play</span>
           </div>
         </div>
       </div>
@@ -37,8 +39,8 @@
         <div class="phone">
           <div class="phone-screen">
             <div class="phone-notch"></div>
-            <div class="spinner"></div>
             <img src="assets/rekt-logo.png" alt="REKT" class="phone-logo">
+            <div class="spinner"></div>
             <div class="phone-title">Building your night</div>
             <div class="phone-sub">Sit tight while we work our magic.</div>
             <div class="phone-homebar"></div>
@@ -47,13 +49,46 @@
       </div>
     </section>
 
+    <section class="collage" aria-hidden="true">
+      <img src="images/IMG_6777.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6762.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6789.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6764.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6771.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6785.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6760.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6783.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6766.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6786.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6779.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6768.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6772.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6781.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6759.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6787.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6763.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6776.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6769.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6782.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6761.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6788.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6765.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6780.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6767.JPG" alt="" loading="lazy">
+      <img src="images/IMG_6784.JPG" alt="" loading="lazy">
+    </section>
+
     <section id="work-with-us" class="work-section">
       <div class="container work-grid">
         <div class="work-copy">
           <h2>Work with&nbsp;us</h2>
           <p>Ready to be the talk of the town? Fill out the form and let’s get this party started together.</p>
         </div>
-        <form class="work-form">
+        <form class="work-form" name="work-with-us" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="work-with-us">
+          <p class="hidden-field">
+            <label>Do not fill this out if you are human: <input name="bot-field"></label>
+          </p>
           <input type="text" name="organizer" placeholder="Organizer name*" required>
           <input type="email" name="email" placeholder="Email address*" required>
           <input type="tel" name="phone" placeholder="Phone*" required>
@@ -64,6 +99,28 @@
       </div>
     </section>
   </main>
+
+  <dialog class="waitlist-modal" id="waitlist-modal">
+    <button type="button" class="waitlist-close" id="waitlist-close" aria-label="Close">&times;</button>
+    <h3 class="waitlist-title">Join the waiting list</h3>
+    <p class="waitlist-copy">Be first in line when REKT goes live.</p>
+    <form class="waitlist-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="waitlist">
+      <p class="hidden-field">
+        <label>Do not fill this out if you are human: <input name="bot-field"></label>
+      </p>
+      <input type="text" name="name" placeholder="Your name*" required>
+      <input type="tel" name="phone" placeholder="Mobile number*" required>
+      <button type="submit" class="btn">Join</button>
+      <p class="waitlist-error" hidden>Something went wrong — please try again.</p>
+    </form>
+    <div class="waitlist-success" hidden>
+      <h3 class="waitlist-title">You&rsquo;re on the list!</h3>
+      <p class="waitlist-copy">We&rsquo;ll text you when the party starts.</p>
+    </div>
+  </dialog>
+
+  <script src="js/waitlist.js" defer></script>
 
   <footer class="site-footer">
     <div class="container footer-row">
