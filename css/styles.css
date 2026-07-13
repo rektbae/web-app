@@ -312,7 +312,7 @@ h2 {
 .waitlist-form[hidden] { display: none; }
 .waitlist-form .btn { padding: 16px; }
 .waitlist-error { margin: 0; font-size: 13px; color: var(--color-coral); }
-.waitlist-success .waitlist-copy { margin-bottom: 0; }
+.waitlist-copy:last-child { margin-bottom: 0; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--color-border-subtle); }
