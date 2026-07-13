@@ -276,6 +276,7 @@ h2 {
 
 /* Waitlist modal */
 .waitlist-modal {
+  box-sizing: border-box; /* width below includes padding, unlike the rest of the page */
   width: min(400px, calc(100vw - 48px));
   padding: 36px 32px 32px;
   border: 1px solid var(--color-border);
