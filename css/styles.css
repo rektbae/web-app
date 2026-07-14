@@ -75,13 +75,38 @@ textarea::placeholder { color: var(--color-text-faint); opacity: 1; }
 
 /* Hero */
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: center;
   padding: 56px var(--container-pad) 88px;
 }
+.hero-copy,
+.hero-phone { position: relative; z-index: 1; }
 .hero-copy { display: flex; flex-direction: column; gap: 26px; }
+
+/* Sparkles — scattered 4-point twinkles behind the hero (Rekt Design System) */
+.hero-sparkles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.sparkle {
+  position: absolute;
+  line-height: 1;
+  animation-name: twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: .25; transform: scale(.8); }
+  50%      { opacity: 1;   transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sparkle { animation: none; opacity: .7; }
+}
 
 h1 {
   margin: 0;
