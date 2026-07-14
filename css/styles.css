@@ -207,10 +207,21 @@ h1 {
 /* Collage — overlapping photo strip between hero and work sections */
 .collage {
   display: flex;
-  justify-content: center;
   align-items: center;
   overflow: hidden;
   padding: 40px 0 56px;
+}
+.collage-track {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  animation: collage-scroll 60s linear infinite;
+}
+.collage:hover .collage-track { animation-play-state: paused; }
+.collage-group {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
 }
 .collage img {
   flex: 0 0 auto;
@@ -220,11 +231,18 @@ h1 {
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6);
   margin-right: -26px;
 }
-.collage img:last-child { margin-right: 0; }
-.collage img:nth-child(4n + 1) { transform: rotate(-4deg) translateY(8px); }
-.collage img:nth-child(4n + 2) { transform: rotate(3deg) translateY(-10px); width: 170px; height: 190px; z-index: 2; position: relative; }
-.collage img:nth-child(4n + 3) { transform: rotate(-2deg) translateY(12px); width: 135px; height: 152px; }
-.collage img:nth-child(4n) { transform: rotate(5deg) translateY(-5px); width: 160px; height: 180px; z-index: 1; position: relative; }
+.collage-group img:nth-child(4n + 1) { transform: rotate(-4deg) translateY(8px); }
+.collage-group img:nth-child(4n + 2) { transform: rotate(3deg) translateY(-10px); width: 170px; height: 190px; z-index: 2; position: relative; }
+.collage-group img:nth-child(4n + 3) { transform: rotate(-2deg) translateY(12px); width: 135px; height: 152px; }
+.collage-group img:nth-child(4n) { transform: rotate(5deg) translateY(-5px); width: 160px; height: 180px; z-index: 1; position: relative; }
+
+@keyframes collage-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .collage-track { animation: none; }
+}
 
 /* Work with us */
 .work-grid {
@@ -354,9 +372,9 @@ h2 {
 
   .collage { padding: 16px 0 44px; }
   .collage img { width: 104px; height: 120px; margin-right: -20px; }
-  .collage img:nth-child(4n + 2) { width: 120px; height: 136px; }
-  .collage img:nth-child(4n + 3) { width: 94px; height: 108px; }
-  .collage img:nth-child(4n) { width: 112px; height: 128px; }
+  .collage-group img:nth-child(4n + 2) { width: 120px; height: 136px; }
+  .collage-group img:nth-child(4n + 3) { width: 94px; height: 108px; }
+  .collage-group img:nth-child(4n) { width: 112px; height: 128px; }
 
   .work-grid {
     grid-template-columns: 1fr;
